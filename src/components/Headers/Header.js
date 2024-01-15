@@ -28,13 +28,29 @@ function Header() {
               <Link className="nav-link" to="about">
                 About
               </Link>
-
-              <Link className="nav-link" to="currencyCovertor">
-              Currency Covertor
-              </Link>
-              <Link className="nav-link" to="multiPageForm">
-              Multi Page Form
-              </Link>
+              <li className="nav-item dropdown">
+                <Link
+                  className="nav-link dropdown-toggle"
+                  to="resources"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Resources
+                </Link>
+                <ul className="dropdown-menu">
+                  <li>
+                    <Link className="dropdown-item" to="currencyCovertor">
+                      Currency Covertor
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="dropdown-item" to="multiPageForm">
+                      Multi Page Form
+                    </Link>
+                  </li>
+                </ul>
+              </li>
             </div>
           </div>
         </div>
