@@ -1,16 +1,18 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useLoaderData } from "react-router-dom";
+import UserContext from "../context/UserContext";
 
 const About = () => {
   const gitData = useLoaderData();
+  const { user } = useContext(UserContext);
 
   return (
     <div>
       About
-      <div className="">{gitData.followers}</div>
+      <div className="">{gitData.name}</div>
       <img src={gitData.avatar_url} alt="userImg" height="20px" />
-      {/* <div>{testD.followers}</div>
-      <img src={testD.avatar_url} alt="userImg" height="20px" /> */}
+      <div>{user.password}</div>
+      <div>{user.email}</div>
     </div>
   );
 };

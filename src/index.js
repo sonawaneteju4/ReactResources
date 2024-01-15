@@ -12,10 +12,11 @@ import {
 import Home from "./components/Pages/Home.js";
 import Layout from "./Layout";
 import About, { gitHubInfoData } from "./components/Pages/About.js";
-import "../node_modules/bootstrap/dist/css/bootstrap.min.css"
+import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js";
 import Currency from "./components/Pages/Currency.js";
 import MultiPageForm from "./components/Pages/MultiPageForm.js";
+import UserContextProvider from "./components/context/UserContextProvider.js";
 
 // const router = createBrowserRouter([
 //   {
@@ -37,20 +38,21 @@ import MultiPageForm from "./components/Pages/MultiPageForm.js";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path="/" element={<Layout/>}>
-      <Route  path="" element={<Home/>} />
-      <Route  path="currencyCovertor" element={<Currency/>} />
-      <Route  path="multiPageForm" element={<MultiPageForm/>} />
-      <Route  path="about" loader={gitHubInfoData} element={<About/>} />
+    <Route path="/" element={<Layout />}>
+      <Route path="" element={<Home />} />
+      <Route path="currencyCovertor" element={<Currency />} />
+      <Route path="multiPageForm" element={<MultiPageForm />} />
+      <Route path="about" loader={gitHubInfoData} element={<About />} />
     </Route>
-    )
-
-)
+  )
+);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <UserContextProvider>
+      <RouterProvider router={router} />
+    </UserContextProvider>
   </React.StrictMode>
 );
 
