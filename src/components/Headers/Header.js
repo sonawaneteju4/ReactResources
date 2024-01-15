@@ -7,7 +7,7 @@ function Header() {
       <nav className="navbar navbar-expand-lg bg-body-tertiary">
         <div className="container-fluid">
           <Link className="navbar-brand" to="">
-            GLS
+            Navbar
           </Link>
           <button
             className="navbar-toggler"
