@@ -15,6 +15,7 @@ import About, { gitHubInfoData } from "./components/Pages/About.js";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css"
 import "../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js";
 import Currency from "./components/Pages/Currency.js";
+import MultiPageForm from "./components/Pages/MultiPageForm.js";
 
 // const router = createBrowserRouter([
 //   {
@@ -39,6 +40,7 @@ const router = createBrowserRouter(
     <Route path="/" element={<Layout/>}>
       <Route  path="" element={<Home/>} />
       <Route  path="currencyCovertor" element={<Currency/>} />
+      <Route  path="multiPageForm" element={<MultiPageForm/>} />
       <Route  path="about" loader={gitHubInfoData} element={<About/>} />
     </Route>
     )
