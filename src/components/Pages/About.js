@@ -1,19 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { useLoaderData } from "react-router-dom";
 
 const About = () => {
   const gitData = useLoaderData();
-  // const [testD, settestD] = useState('');
 
-  // useEffect(() => {
-  //   fetch("https://api.github.com/users/sonawaneteju4")
-  //   .then(response => response.json())
-  //   .then(data =>{
-  //       console.log(data)
-  //       settestD(data);
-
-  //   })
-  // });
   return (
     <div>
       About
