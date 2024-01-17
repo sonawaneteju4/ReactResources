@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Input } from "../../components";
 import useCurrencyInfo from "../hooks/useCurrencyInfo";
-
+import Container from "./Container";
 
 const Currency = () => {
   const [amount, setAmount] = useState(null);
@@ -26,6 +26,7 @@ const Currency = () => {
 
   return (
     <div>
+      <Container/>
       <div
         className=""
         style={{

@@ -13,6 +13,7 @@ const About = () => {
       <img src={gitData.avatar_url} alt="userImg" height="20px" />
       <div>{user.password}</div>
       <div>{user.email}</div>
+      <input type="date"></input>
     </div>
   );
 };

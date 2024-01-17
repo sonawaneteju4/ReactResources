@@ -1,19 +1,18 @@
-import React, { useState, useContext } from "react";
+import React, {  useContext } from "react";
 import UserContext from "../context/UserContext";
 import { useNavigate } from "react-router-dom";
 function Home() {
-  const [userCred, setuserCred] = useState({ email: "", password: "" });
   const nav = useNavigate();
-  const { setUser } = useContext(UserContext);
+  const {user, setUser } = useContext(UserContext);
 
   const onChnange = (e) => {
-    setuserCred({ ...userCred, [e.target.name]: e.target.value });
-    console.log(userCred)
+    setUser({ ...user, [e.target.name]: e.target.value });
+    console.log(user)
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setUser(userCred);
+    setUser(user);
     nav("about");
   };
 
@@ -28,7 +27,7 @@ function Home() {
             <input
               type="email"
               name="email"
-              value={userCred.email}
+              value={user.email}
               class="form-control"
               id="exampleInputEmail1"
               aria-describedby="emailHelp"
@@ -45,7 +44,7 @@ function Home() {
             <input
               type="password"
               name="password"
-              value={userCred.password}
+              value={user.password}
               class="form-control"
               id="exampleInputPassword1"
               onChange={onChnange}

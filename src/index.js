@@ -17,6 +17,7 @@ import "../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js";
 import Currency from "./components/Pages/Currency.js";
 import MultiPageForm from "./components/Pages/MultiPageForm.js";
 import UserContextProvider from "./components/context/UserContextProvider.js";
+import  { FormProvider } from "./MultipageForm/context/FormContext.js";
 
 // const router = createBrowserRouter([
 //   {
@@ -37,6 +38,7 @@ import UserContextProvider from "./components/context/UserContextProvider.js";
 // ]);
 
 const router = createBrowserRouter(
+  // { basename: '/resources' },
   createRoutesFromElements(
     <Route path="/" element={<Layout />}>
       <Route path="" element={<Home />} />
@@ -50,9 +52,11 @@ const router = createBrowserRouter(
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <UserContextProvider>
-      <RouterProvider router={router} />
-    </UserContextProvider>
+    <FormProvider>
+      <UserContextProvider>
+        <RouterProvider router={router} />
+      </UserContextProvider>
+    </FormProvider>
   </React.StrictMode>
 );
 

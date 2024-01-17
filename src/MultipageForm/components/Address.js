@@ -6,6 +6,7 @@ const Address = () => {
   return (
     <div>
       <div>
+        <div>{data.userName}</div>
         <div>
           <label className="form-label" htmlFor="lane">
             Lane
