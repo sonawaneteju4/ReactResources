@@ -26,7 +26,7 @@ const Input = ({
           id={amountInputId}
           className="form-control col-6"
           type="number"
-          placeholder="Amount"
+          placeholder=""
           disabled={amountDisable}
           value={amount}
           onChange={(e) =>

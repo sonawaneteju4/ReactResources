@@ -37,10 +37,10 @@ import  { FormProvider } from "./MultipageForm/context/FormContext.js";
 //   },
 // ]);
 
+
 const router = createBrowserRouter(
-  // { basename: '/resources' },
   createRoutesFromElements(
-    <Route path="/" element={<Layout />}>
+    <Route path="resources/" element={<Layout />}>
       <Route path="" element={<Home />} />
       <Route path="currencyCovertor" element={<Currency />} />
       <Route path="multiPageForm" element={<MultiPageForm />} />
